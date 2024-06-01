@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           *{
+            margin: 0;
+            padding: 0;box-sizing: border-box;
+           }
+           body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+           }
+           .sun{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            box-shadow: 0 0 50px yellow;
+           }
+           .earth{
+            position: absolute ;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgb(14, 33, 245);
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            animation: rotate-earth 12s linear;
+           }
+           .moon{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: azure;
+            top: 40%;
+            left: 50%;
+            transform-origin:top left ;
+            animation: rotate-moon 6s linear infinite
+           }
+           .earth::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border: 1px dashed rgba(227, 180, 180, 0.5);
+            border-radius: 50%;
+            box-sizing: border-box;
+            transform-origin: 0 0 ;
+            transform: translate(-50%,-50%)scale(0);
+             
+           }
+           @keyframes rotate-earth {
+            0%{
+                transform: rotate(0deg) translateX(100px);
+            }
+            100%{
+                transform: rotate(360deg) translateX(100px);
+            }
+           }
+           @keyframes rotate-moon {
+            0%{
+                transform: rotate(0deg) translateX(100px);
+            }
+            100%{
+                transform: rotate(360deg) translateX(100px);
+            }
+            
+           }
+
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="earth"> 
+        <div class="moon"></div>
+    </div>
+</body>
+</html>
