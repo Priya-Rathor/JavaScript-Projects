@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('photo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    color: white; /* Ensuring text is readable */
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding text shadow for better readability */
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    gap: 2px;
+    margin-bottom: 20px;
+    background: rgba(253, 189, 129, 0.8); /* Adding a semi-transparent background to improve readability */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#sudoku-board input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url('photo.webp') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        margin: 0;
+        color: white; /* Ensuring text is readable */
+    }
+    
+    h1 {
+        color: white;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding text shadow for better readability */
+        font-size: 3em; /* Increased font size */
+    }
+    
+    #sudoku-board {
+        display: grid;
+        grid-template-columns: repeat(9, 60px); /* Increased cell size */
+        gap: 2px;
+        margin-bottom: 20px;
+        background: rgba(73, 196, 249, 0.8); /* Adding a semi-transparent background to improve readability */
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    #sudoku-board input {
+        width: 60px; /* Increased input size */
+        height: 60px; /* Increased input size */
+        text-align: center;
+        font-size: 24px; /* Increased font size */
+        border: 2px solid #000;
+        outline: none;
+        background: rgb(190, 254, 248); /* Background for inputs */
+    }
+    
+    #sudoku-board input.solved {
+        animation: solved 0.3s ease-in-out;
+    }
+    
+    @keyframes solved {
+        from {
+            background-color: yellow;
+        }
+        to {
+            background-color: white;
+        }
+    }
+    
+    .controls {
+        display: flex;
+        gap: 10px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 20px; /* Increased font size */
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #1e90ff;
+        color: rgb(255, 255, 255);
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #1c86ee;
+    }
+    
+    /* Make responsive adjustments */
+    @media (max-width: 768px) {
+        #sudoku-board {
+            grid-template-columns: repeat(9, 40px); /* Smaller cell size on small screens */
+        }
+    
+        #sudoku-board input {
+            width: 40px; /* Smaller input size on small screens */
+            height: 40px; /* Smaller input size on small screens */
+            font-size: 18px; /* Smaller font size on small screens */
+        }
+    
+        button {
+            font-size: 16px; /* Smaller font size on small screens */
+        }
+    }
+    
+    border: 2px solid #000;
+    outline: none;
+    background: white; /* Background for inputs */
+}
+
+#sudoku-board input.solved {
+    animation: solved 0.3s ease-in-out;
+}
+
+@keyframes solved {
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c86ee;
+}
